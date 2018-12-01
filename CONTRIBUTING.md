@@ -13,6 +13,8 @@ star	the challange number (each day has 2 stars)
 lang	the language of your implementation
 ```
 
+If your solution has more than one file, you may create a folder named with your nickname to store it.
+
 ### Filenames 
 
 Inside it's respective folder, your solution needs to be named as `<nick><num>`, where:
