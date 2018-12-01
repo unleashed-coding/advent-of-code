@@ -5,7 +5,7 @@
 The folders in this repository are structured as following:
 
 ```
-<year>/<day>/<star>/<lang>/
+<year>/<day>_<star>/<lang>/
 
 year	the year of the event 
 day  	the challange day (2 characters [01, 02, 03... 25])
