@@ -1,19 +1,17 @@
 with open('input', 'r') as raw:
-    input = raw.read().split('\n')
+    i = raw.read().strip().split('\n')
 
 frequency = 0
-reached = [0]
-find = False
+reached = {0}
+finded = False
 
-while not find:
-    for change in input:
+while not finded:
+    for change in i:
         frequency += int(change)
 
         if frequency in reached:
             print(frequency)
-            find = True
+            finded = True
             break
         else:
-            reached.append(frequency)
-
-#print(reached)
+            reached.update({frequency})
