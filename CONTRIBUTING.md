@@ -5,10 +5,10 @@
 The folders in this repository are structured as following:
 ```
 .
-└── year
-    └── day_star
-        └── lang
-            └── your_github_username.ext
+└── <year>
+    └── <day>_<star>
+        └── <lang>
+            └── <your_github_username>.ext
 
 year  the year of the event 
 day   the challange day (2 characters [01, 02, 03... 25])
