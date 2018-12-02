@@ -4,7 +4,8 @@ use std::{env, fs};
 fn get_frequency_twice(ints: &[i64]) -> i64 {
     let mut v = 0;
     let mut h = HashSet::new();
-    
+    h.insert(0);
+
     loop {
         for num in ints {
             v += num;
