@@ -1,1 +1,1 @@
-# advent-of-code
+# Solving puzzles from [Advent of Code](http://adventofcode.com)
