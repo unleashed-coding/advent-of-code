@@ -35,5 +35,5 @@ fn main() {
 
     let (a, b) = do_count(file.as_slice());
 
-    println!("{:?}", a * b);
+    println!("{}", a * b);
 }
