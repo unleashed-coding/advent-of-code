@@ -1,7 +1,3 @@
-# 
-# LEMBRA DE TIRAR O INPUT CARAJOOOOOOO
-# 
-
 with open('input', 'r') as raw:
     i = raw.read().strip().split('\n')
 
