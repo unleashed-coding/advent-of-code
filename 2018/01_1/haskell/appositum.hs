@@ -1,5 +1,5 @@
-import Data.Foldable (foldl')
-import System.Environment (getArgs)
+import           Data.Foldable      (foldl')
+import           System.Environment (getArgs)
 
 readInt :: String -> Int
 readInt = read
@@ -12,6 +12,7 @@ main :: IO ()
 main = do
   args <- getArgs
   case args of
-    [] -> putStrLn "Usage: ./appositum input.txt"
-    (arg:_) -> readFile arg
-           >>= print . foldl' (flip ($)) 0 . map parse . lines
+    [] ->
+      putStrLn "Usage: ./appositum input.txt"
+    (arg:_) ->
+      readFile arg >>= print . foldl' (flip ($)) 0 . map parse . lines
