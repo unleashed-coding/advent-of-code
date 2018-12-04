@@ -16,6 +16,7 @@ loop acc lst =
 
 appearTwice :: Ord a => [a] -> Maybe a
 appearTwice = rec M.empty where
+  rec :: Ord a => Map a a -> [a] -> Maybe a
   rec seen [] = Nothing
   rec seen (x:xs) =
     case M.lookup x seen of
