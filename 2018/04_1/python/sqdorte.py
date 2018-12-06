@@ -1,7 +1,5 @@
 with open('input', 'r') as raw:
-    i = raw.read().strip().split('\n')
-
-i = sorted(i)
+    i = sorted(raw.read().strip().split('\n'))
 
 guard = None
 sleeping = False
@@ -39,8 +37,6 @@ for line in i:
             except KeyError:
                 guards[guard][1][i] = 1
         change = False
-
-print(guards)
 
 guard = sorted(((guards[x][0],x) for x in guards))[-1][1]
 sleep = guards[guard][1]
