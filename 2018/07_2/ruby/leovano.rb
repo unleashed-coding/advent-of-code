@@ -23,7 +23,7 @@ while steps_done.size < dependencies.size
   steps_current.sort!
   steps_current.uniq!
 
-  is_ready = ->(task) { (dependencies[task] - steps_done).empty? }
+  is_ready = lambda { |task| (dependencies[task] - steps_done).empty? }
   workers += steps_current
              .select(&is_ready)
              .take(MAXWORKERS - workers.size)
