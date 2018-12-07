@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+raise "Arg1" if ARGV[0].nil?
 input = File.readlines(ARGV[0])
 
 RULE = /^Step ([a-zA-Z]+) .* step ([a-zA-Z]+) can begin.$/.freeze
@@ -33,7 +34,7 @@ while steps_done.size < dependencies.size
   workers.map! { |worker, secs| [worker, secs - min] }
 
   workers.select { |it| it[1].zero? }.each do |worker|
-    workers.slice!(workers.index(worker))
+    workers.slice! workers.index worker
     steps_done << worker[0]
     steps_current += dependents[worker[0]]
   end
