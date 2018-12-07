@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+raise "Arg1" if ARGV[0].nil?
 input = File.readlines(ARGV[0])
 
 RULE = /^Step ([a-zA-Z]+) .* step ([a-zA-Z]+) can begin.$/.freeze
